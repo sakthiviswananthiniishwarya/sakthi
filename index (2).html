@@ -1,0 +1,79 @@
+- <html>
+    <head>
+        <title>Task</title>
+        <style>
+            body
+            {
+                margin-left: 500px;
+                background-color: aquamarine;
+            }
+            div{
+               height: 100px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            function validate()
+            {
+             var n=document.getElementsByClassName('in')
+             var p=document.getElementsByClassName('ans')
+             var res = ["!!!name","!!!email","!!!password",
+             "!!!confrim password","!!!Mobile number"];
+             f=true
+             for(i=0;i<n.length;i++)
+             {
+            
+                if(n[i].value=='')
+                {
+                
+                    p[i].innerHTML=res[i]+" must be fill out";
+                    p[i].style.color="red"
+                    f=false
+                }
+                else
+                {
+                    p[i].innerHTML=''
+                }
+             }
+             return f
+            }
+            </script>
+
+    <form action="">
+                <div>
+                <label for="">Name:</label><br><br>       
+                <input type="text" class="in"><br>
+                <p class="ans"></p>
+                </div>
+                <div>
+                <label for="">Email:</label><br><br>
+                <input type="text" class="in"><br>
+                <p class="ans"></p>
+                </div>
+                <div>
+                <label for="">Password:</label><br><br>
+                <input type="password" class="in"><br>
+                <p class="ans"></p>
+                </div>
+                <div>
+                <label for="">Re Enter:</label><br><br>
+                <input type="text" class="in"><br>
+                <p class="ans"></p>
+                </div>
+                <div>
+                <label for="">Contact:</label><br><br>
+                <input type="number" class="in"><br>
+                <p class="ans"></p>
+                </div>      
+                <button onclick="return validate()">submit</button>
+
+            </form>
+            
+    </body>
+</html> 
+
+
+
+ 
